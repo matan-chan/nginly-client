@@ -6,4 +6,5 @@ export default defineConfig({
   target: "node18",
   noExternal: ["chalk", "commander", "glob"],
   clean: true,
+  banner: { js: "#!/usr/bin/env node\n" },
 });

@@ -35,8 +35,8 @@ export const handleCiExitCode = (result: AnalyzeResult, options: { strict?: bool
     process.exit(EXIT_WARNING);
   }
   if (hasWarnings(result)) {
-    console.log(chalk.yellow(`\n⚠ Analysis completed with ${result.warningCount} warning(s)`));
-    process.exit(EXIT_WARNING);
+    console.log(chalk.yellow(`\n⚠ Analysis completed with ${result.warningCount} warning(s) (visible; use --strict to fail the job)`));
+    process.exit(EXIT_SUCCESS);
   }
   console.log(chalk.green("\n✓ All configurations analyzed successfully"));
   process.exit(EXIT_SUCCESS);

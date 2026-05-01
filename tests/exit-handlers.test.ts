@@ -47,12 +47,12 @@ describe("handleCiExitCode", () => {
     expect(spy).toHaveBeenCalledWith(1);
   });
 
-  it("exits with 1 (WARNING) even without strict when warnings present", () => {
+  it("exits with 0 (SUCCESS) when only warnings exist and strict is off", () => {
     const spy = mockExit();
     expect(() =>
       handleCiExitCode({ warningCount: 1 }, {})
-    ).toThrow("EXIT:1");
-    expect(spy).toHaveBeenCalledWith(1);
+    ).toThrow("EXIT:0");
+    expect(spy).toHaveBeenCalledWith(0);
   });
 
   it("exits with 0 (SUCCESS) when no issues exist", () => {

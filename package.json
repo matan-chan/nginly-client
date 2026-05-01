@@ -1,6 +1,6 @@
 {
   "name": "nginly-client",
-  "version": "0.1.2",
+  "version": "0.1.002",
   "description": "CI client: discover nginx configs and send to Nginly for analysis",
   "type": "commonjs",
   "main": "dist/index.js",
